@@ -4,13 +4,13 @@
 	if(isset($_POST['submit'])) {
 	$field = $_POST['field'];
 	$sql = "SELECT * FROM customer 
-			WHERE phone=$field;";
+			WHERE Phone=$field;";
 
 	$result = mysqli_query($dbcon, $sql);
 	$resultCheck = mysqli_num_rows($result);
 	if ($resultCheck > 0) {
  		while ($row = mysqli_fetch_assoc($result)) {
- 			echo "ID: " . $row["CustomerID"]. "ADDRESS: " . $row["address"]. "     OCUPATION: " . $row["ocupation"]. "     SEX " . $row["sex"]. "     PHONE: ". $row["phone"]. "     AGE: ". $row["age"]. "<br>";
+ 			echo "ID: " . $row["CustomerID"]. "ADDRESS: " . $row["Address"]. "     OCUPATION: " . $row["Ocupation"]. "     SEX " . $row["Sex"]. "     PHONE: ". $row["Phone"]. "     AGE: ". $row["Age"]. "<br>";
  		}
  	} else {
  		echo 'No Mathcing Data';

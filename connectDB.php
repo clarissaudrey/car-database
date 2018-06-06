@@ -3,7 +3,7 @@
 	DEFINE ('username', 'root');
 	DEFINE('password', 'root');
 	DEFINE('host', 'localhost');
-	DEFINE('name', 'testb');
+	DEFINE('name', 'CS304');
 
 	$dbcon = mysqli_connect(host, username, password, name);
 

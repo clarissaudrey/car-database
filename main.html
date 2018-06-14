@@ -38,7 +38,36 @@
 		<button type="submit" name="submit"> Submit </button>
 	</form>
 
+	   <h2>Queries using PDO</h1>
+    <h3>Change employee email<h6>
+    <form action="ChangeEmail.php" method="POST">
+        <label for=eid>Employee id</label>
+        <input type="number" name="eid" id="eid"><br/>
+        <label for="email">Email</label>
+        <input type= "email" name="email" id="email"><br/>
+        <input type="submit" value="Submit">
+    </form>
 
+	<h3>Delete an employee</h3>
+	<form action="DeleteEmployee.php" method="POST">
+		<label for=eid>Employee id</label>
+        <input type="number" name="eid" id="eid"><br/>
+		<input type="submit" value="Submit">
+	</form>
+
+	<h3>Get All Employee's Ratings</h3>
+	<form action="GetAllEmployeesRating.php" method="GET">
+		<label for=eid>Employee id</label>
+        <input type="number" name="eid" id="eid"><br/>
+		<input type="submit" value="Submit">
+	</form>
+
+	<h3>Get Average Employee's Rating</h3>
+	<form action="GetAverageRating.php" method="GET">
+	<label for=eid>Employee id</label>
+        <input type="number" name="eid" id="eid"><br/>
+		<input type="submit" value ="Submit">
+	</form>
 
 </body> 
 </html>

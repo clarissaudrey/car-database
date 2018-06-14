@@ -3,17 +3,18 @@
 
 	if(isset($_POST['submit'])) {
 	$field = $_POST['field'];
-	$sql = "SELECT 
-				employee.EmployeeID, 
-				employee.Name, 
-				AVG(employee_evaluation.Rating)
-			FROM 
-				employee, 
-				employee_evaluation 
-			WHERE 
-				employee.EmployeeID = employee_evaluation.EmployeeID 
-			GROUP BY employee.EmployeeID 
-			HAVING AVG(employee_evaluation.Rating) >=  $field;";
+	$sql = "SELECT  
+	employee.EmployeeID,
+    employee.Name
+FROM 
+	employee
+WHERE employee.EmployeeID NOT IN (
+	SELECT DISTINCT
+   		employee.EmployeeID
+	FROM
+    	employee_evaluation
+	WHERE
+    	employee.EmployeeID = employee_evaluation.EmployeeID AND employee_evaluation.Rating < $field);";
 
 	$result = mysqli_query($dbcon, $sql);
 	//printf(" This is Results : %s\n", $field);
@@ -27,3 +28,4 @@
  		echo 'No Matching Data';
 	}
 	?>
+

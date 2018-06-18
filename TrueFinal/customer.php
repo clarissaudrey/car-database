@@ -22,10 +22,13 @@
 
 <br> 	</br>
 <b> Search vehicle with gas type</b>
-<form action="gasType(Extra).php" method="POST">
-	<input type="text" name="field" placeholder="Gas Type">
-	<br>
-	<button type="submit" name="submit"> Submit </button>
+<form action="gasType(Extra).php" name='add' method="POST">
+Options: <select name='field'>
+     <option value='Gas' >Gas</option>
+     <option value='Diesel'>Diesel</option>
+     <option value='Electric'>Electric</option>
+     </select>
+<input type='submit' name='submit'/>
 </form>
 
 </body>

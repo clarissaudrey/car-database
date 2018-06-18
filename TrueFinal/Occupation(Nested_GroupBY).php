@@ -28,8 +28,9 @@ require_once "pdo.php";
 $field = $_POST['field'];
 $sql = "SELECT TEMP.Occupation, MAX(TEMP.count) as max
 			FROM (SELECT Occupation, COUNT(*) as count
-				  FROM customer 
-			      GROUP BY Occupation) AS TEMP;";
+		    	  FROM customer 
+			      GROUP BY Occupation 
+                  ORDER BY count DESC) AS TEMP";
 
 $stmt = $pdo->query($sql);
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

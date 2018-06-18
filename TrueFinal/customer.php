@@ -8,12 +8,12 @@
 	<title></title>
 </head>
 <body>
-	<h1> Welcome to Team 42! </h1>
+	<h1> Welcome Customer! </h1>
 	
 	<hr>
 
 <br> 	</br>
-<b> Find top (Input) driven vechicles</b>
+<b> Find top (Input) test driven vehicles</b>
 <form action="topDriven(Extra).php" method="POST">
 	<input type="number" name="field" placeholder="Input">
 	<br>
@@ -21,7 +21,7 @@
 </form>
 
 <br> 	</br>
-<b> Search vehicle with gas type</b>
+<b> Search vehicle by gas type</b>
 <form action="gasType(Extra).php" name='add' method="POST">
 Options: <select name='field'>
      <option value='Gas' >Gas</option>

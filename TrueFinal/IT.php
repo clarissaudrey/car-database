@@ -33,7 +33,7 @@ Options: <select name='option'>
 
 <br> </br>
 
-<b> Current target customer occupation </b>
+<b> Car model inventory checker </b>
 <form action="Model(Nested_GroupBY).php" name='add' method="POST">
 Options: <select name='option'>
      <option value='MAX' >MAX</option>
@@ -43,6 +43,25 @@ Options: <select name='option'>
 </form>
 
 <br>    </br>
+
+<b> Sale Information. Please enter all information.</b>
+    <form action="InsertSale.php" method="POST">
+        <label for=sid>Sale ID</label>
+        <input type="number" name="sid" id="sid"><br/>
+        <label for=vid>Vechile ID</label>
+        <input type="number" name="vid" id="vid"><br/>
+        <label for=cid>Customer ID</label>
+        <input type="number" name="cid" id="cid"><br/>
+        <label for=eid>Employee ID</label>
+        <input type="number" name="eid" id="eid"><br/>
+        <label for=date>Date</label>
+        <input type="text" name="date" id="date"><br/>
+        <label for=pr>Payment Received</label>
+        <input type="text" name="pr" id="pr"><br/>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>    </br>
 <b>Update Employee Email<b>
     <form action="ChangeEmail(Update).php" method="POST">
         <label for=eid>Employee id</label>

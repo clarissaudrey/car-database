@@ -9,10 +9,10 @@
 		} else if (($username == 'sales')&&($pass == 'money')) {
 			include_once 'IT.php';
 		} else {
-			header('Location: index.html');
+			header('Location: index.php');
 			exit();
 		} 
 	} else {
-		header('Location: index.html');
+		header('Location: index.php');
 		exit();
 	}

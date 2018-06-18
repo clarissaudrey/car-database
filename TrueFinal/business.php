@@ -87,6 +87,31 @@ Options: <select name='option'>
 
 	<br> 	</br>
 
+<b> Hire Employee. Please enter all information</b>
+	<form action="InsertEmployee.php" method="POST">
+		<label for=eid>Employee id</label>
+        <input type="number" name="eid" id="eid"><br/>
+        <label for=phone>Phone Number</label>
+        <input type="text" name="phone" id="phone"><br/>
+        <label for=addr>Address</label>
+        <input type="text" name="addr" id="addr"><br/>
+        <label for=role>Role</label>
+        <input type="text" name="role" id="role"><br/>
+        <label for=age>Age</label>
+        <input type="number" name="age" id="age"><br/>
+        <label for=sex>Sex</label>
+        <input type="text" name="sex" id="sex"><br/>
+        <label for=yrs>Years Working</label>
+        <input type="number" name="yrs" id="yrs"><br/>
+        <label for=name>Name</label>
+        <input type="text" name="name" id="name"><br/>
+        <label for=email>Email</label>
+        <input type="text" name="email" id="email"><br/>
+		<input type="submit" value="Submit">
+	</form>
+
+	<br> 	</br>
+
 <b>Employee Evaluation Deletion </b>
 	<form action="DeleteEvaluationRecord.php" method="POST">
 		<label for=ev_id>Evaluation ID</label>

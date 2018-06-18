@@ -42,6 +42,15 @@ Options: <select name='option'>
 <input type='submit' name='submit'/>
 </form>
 
+<br>    </br>
+<b>Change employee email<b>
+    <form action="ChangeEmail(Update).php" method="POST">
+        <label for=eid>Employee id</label>
+        <input type="number" name="eid" id="eid"><br/>
+        <label for="email">Email</label>
+        <input type= "email" name="email" id="email"><br/>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 </html>

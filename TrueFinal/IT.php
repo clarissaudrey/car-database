@@ -71,6 +71,26 @@ Options: <select name='option'>
         <input type="submit" value="Submit">
     </form>
 
+<br>    </br>
+<b>Add new customer. Please enter all information</b>
+	<form action="InsertCustomer.php" method="POST">
+		<label for=cid>Customer ID</label>
+        <input type="number" name="cid" id="cid"><br/>
+		<label for=name>Name</label>
+        <input type="text" name="name" id="name"><br/>
+        <label for=addr>Address</label>
+        <input type="text" name="addr" id="addr"><br/>
+        <label for=occ>Occupation</label>
+        <input type="text" name="occ" id="occ"><br/>
+        <label for=sex>Sex</label>
+        <input type="text" name="sex" id="sex"><br/>
+		<label for=phone>Phone Number</label>
+        <input type="text" name="phone" id="phone"><br/>
+		<label for=age>Age</label>
+        <input type="number" name="age" id="age"><br/>
+		<input type="submit" value="Submit">
+	</form>
+
 </body>
 </html>
 

@@ -1,23 +1,20 @@
 <?php
-
-    echo "<pre>\n";
-    require_once "pdo.php";
-    $cid = htmlentities($_POST['cid']);
-    $name = htmlentities($_POST['name']);
-    $addr = htmlentities($_POST['addr']);
-    $occ = htmlentities($_POST['occ']);
-    $sex = htmlentities($_POST['sex']);
-    $phone = htmlentities($_POST['phone']);
-    $age = htmlentities($_POST['age']);
-    echo "Insert the following new customer:\n";
+echo "<pre>\n";
+require_once "pdo.php";
+$cid = $_POST['cid'];
+$name = $_POST['name'];
+$addr = $_POST['addr'];
+$occ = $_POST['occ'];
+$sex = $_POST['sex'];
+$phone = $_POST['phone'];
+$age = $_POST['age'];
+echo "Insert the following new customer:\n";
 
 try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql_insert = "INSERT INTO customer (CustomerID, Name, Address, Occupation, Sex, Phone, Age)
-             VALUES ( :cid, :named , :addr, :occ , :sex , :phone , :age) ";
-    $pdo->prepare($sql_insert);
-    $ped->execute(array( ':cid' => $_POST['cid'], ':named' => $_POST['name'] ':addr' => $_POST['addr'], ':occ' => $_POST['occ'];
-                    ':sex' => $_POST['sex'], ':phone' => $_POST['phone'], ':age' => $_POST['age']);
+             VALUES ($cid, '$name', '$addr', '$occ', '$sex', '$phone', $age);";
+    $pdo->exec($sql_insert);
     echo '<table border="1">'."\n";
 
     echo "<tr><td>";

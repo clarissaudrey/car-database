@@ -27,7 +27,7 @@ $sql = "SELECT * FROM vehicle WHERE GasType = :gasType
 			ORDER BY NumberAvailable DESC";
 
 $stmt = $pdo->prepare($sql);
-$stmt->execute( array( ':gasType' => $_GET['gasType']) );
+$stmt->execute( array( ':gasType' => $_GET['field']) );
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo '<table border="1">'."\n";
 	echo "<tr><td>";
